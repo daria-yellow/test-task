@@ -8,6 +8,16 @@ export const Matrix: React.FC = () => {
   const [hoveredCell, setHoveredCell] = useState<CellType | null>();
   const [hoveredRow, setHoveredRow] = useState<number | null>();
 
+  const backToStart = useCallback(() => {
+    setMatrixValues([]);
+
+    setMatrix({
+      columns: 0,
+      rows: 0,
+      highlightAmount: 0,
+    });
+  }, [matrix, matrixValues]);
+
   const removeRow = useCallback(() => {
     const matrixValuesCopy = matrixValues;
 
@@ -178,8 +188,12 @@ export const Matrix: React.FC = () => {
       </table>
 
       <div className="buttons">
-        <button onClick={addNewRow}>Add a new row</button>
-        <button onClick={removeRow}>Remove a row</button>
+        <div>
+          <button onClick={addNewRow}>Add a new row</button>
+          <button onClick={removeRow}>Remove a row</button>
+        </div>
+
+        <button onClick={backToStart}>Back</button>
       </div>
     </div>
   );

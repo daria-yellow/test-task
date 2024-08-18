@@ -49,6 +49,11 @@ th {
   z-index: 20;
 }
 
+.buttons div {
+  display: flex;
+  gap: 20px;
+}
+
 table thead th {
   padding: 3px;
   position: sticky;
@@ -62,6 +67,7 @@ table tbody th:first-child {
   position: sticky;
   left: 0;
   z-index: 10;
+  min-width: 100px;
 }
 
 table tbody th {

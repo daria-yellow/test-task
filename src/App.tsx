@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="">
-      {matrix.columns ? <Matrix /> : <MatrixInput />}
+      {matrix.rows ? <Matrix /> : <MatrixInput />}
     </div>
   );
 }
