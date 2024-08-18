@@ -1,45 +1,72 @@
 table {
-    width: 100%;
-    height: 100%;
-    padding: 100px;
+  width: 100%;
+  height: 100%;
+  padding: 100px 0;
 }
 
 th {
-    padding: 2px 4px;
-    border: 1px solid black;
-    position: relative;
+  padding: 2px 4px;
+  border: 1px solid black;
+  position: relative;
 }
 
 .rowValue {
-    cursor: pointer;
-    transition: all 1s;
+  cursor: pointer;
+  transition: all 1s;
 }
 
 .rowValue:hover {
-    background-color: rgb(88, 10, 255);
-    color: white;
+  background-color: rgb(88, 10, 255);
+  color: white;
 }
 
 .closest {
-    background-color: rgba(121, 64, 239, 0.6);
+  background-color: rgba(121, 64, 239, 0.6);
 }
 
 .rowHovered {
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    background: linear-gradient(0.25turn, rgb(88, 10, 255), rgba(121, 64, 239, 0.6));
-    z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(
+    0.25turn,
+    rgb(88, 10, 255),
+    rgba(121, 64, 239, 0.6)
+  );
+  z-index: -1;
 }
 
 .buttons {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: white;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: white;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 20;
+}
+
+table thead th {
+  padding: 3px;
+  position: sticky;
+  top: 86px;
+  z-index: 10;
+  width: 25vw;
+  background: white;
+}
+
+table tbody th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 10;
+}
+
+table tbody th {
+  position: sticky;
+  left: 0;
+  background: white;
+  z-index: 8;
 }
