@@ -1,0 +1,30 @@
+.container {
+  height: 100vh;
+}
+
+form {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  width: 300px;
+  margin: auto;
+}
+
+input {
+  padding: 8px 20px;
+  border-radius: 12px;
+  outline: none;
+  width: 100%;
+}
+
+input:focus-visible {
+  border: 2px solid rgb(88, 10, 255) !important;
+}
+
+.error {
+  color: brown;
+  font-size: 12px;
+  margin-top: 6px;
+}

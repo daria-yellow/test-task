@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +18,14 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button {
+  border-radius: 12px;
+  padding: 14px 20px;
+  background: radial-gradient(121.47% 54.46% at -1.6% 7.33%, rgb(121, 64, 239) 0px, rgb(88, 10, 255) 100%);
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  color: white;
 }
